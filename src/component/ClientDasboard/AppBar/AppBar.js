@@ -47,9 +47,14 @@ const Header = () =>{
     setAnchorEl(null);
   };
 
+  const hendleClick = () =>{
+    localStorage.removeItem('success');
+    window.location.reload(false);
+  }
+
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar  position='fixed' >
         <Toolbar>
           
           <SwipeableTemporaryDrawer />
@@ -91,7 +96,7 @@ const Header = () =>{
                 onClose={handleClose}
               >
                 <MenuItem ><Link className={classes.link} href="/profile">Profile</Link></MenuItem>
-                <MenuItem ><Link className={classes.link} href="/cards">Logout</Link></MenuItem>
+                <MenuItem ><Link className={classes.link} onClick={hendleClick}>Logout</Link></MenuItem>
               </Menu>
             
             </Toolbar>

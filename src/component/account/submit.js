@@ -11,7 +11,7 @@ export default function Submit(){
         console.log('form data' , data);
         postPhone(data);
         localStorage.setItem('contact',JSON.stringify(data));
-        alert(JSON.stringify(data) );
+        //alert(JSON.stringify(data) );
         history.push('/lal');
     }
 

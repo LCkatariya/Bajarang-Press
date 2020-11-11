@@ -5,7 +5,7 @@ export default class Slider extends Component {
 
     return(
         <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
+            <div className="carousel-inner"  style={{height:"650px"}}>
                 <div className="carousel-item active">
                 <img className="d-block w-100" src={require("../../assets/images/slider/cal.jpg")} alt="First slide" />
                 </div>

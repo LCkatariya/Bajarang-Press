@@ -7,8 +7,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { useHistory } from 'react-router-dom';
-import { Input, makeStyles } from '@material-ui/core';
-import FormDialog from './SignIn';
+import { makeStyles } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -34,7 +34,7 @@ export default function Verification(props) {
  
   }
 
-  
+  console.log('otpsubmit')
 
   return (
     <div >
@@ -53,8 +53,7 @@ export default function Verification(props) {
           id="number" 
            
           variant="outlined"
-          type="number" 
-         inputProps={{ type: 'number' }}
+          
           value={otp}
           onChange={e=>{setOtp(e.target.value)}}
           fullWidth 

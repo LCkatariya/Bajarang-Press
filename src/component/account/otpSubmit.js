@@ -10,8 +10,10 @@ export default function Otp(){
    const handleSubmit=(data)=>{
         console.log('form data' , data);
         postOtp(data);
-        alert(JSON.stringify(data) );
-        history.push('/');
+        //alert(JSON.stringify(data) );
+        history.push('/')
+        console.log('form data-1' , data);
+        
     }
 
     return(

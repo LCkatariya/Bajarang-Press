@@ -24,13 +24,23 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+  link: {
+    color: "inherit",
+    "&:hover": {
+        color: "inherit",
+        // textDecoration: "underline"
+    }
+  }
 }));
 const Home =() =>{
   const history = useHistory()
+  // if (JSON.parse(localStorage.getItem('success'))===false) {
+  //   history.push('lal');
+  // } else {
+  //  // history.push('/'); 
+  // }
   return(
-  <Button onClick={()=>history.push("/login")} variant="outlined" color="inherit" >
-            login
-          </Button>
+ <div></div>
 )
 }
 
@@ -41,7 +51,7 @@ export default function ButtonAppBar() {
     <Router>
     <div className={classes.root}>
       
-      <AppBar position="static">
+      <AppBar position="fixed" >
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon/>
@@ -50,9 +60,11 @@ export default function ButtonAppBar() {
           
           </Typography>
           
-
+          <Button href='/login' className={classes.link} variant="outlined" color="inherit" >
+            login
+          </Button>
             <Switch>
-              <Route exact path ="/" component={Home} />
+              <Route exact path ="/" component={Home} /> 
               <Route path = "/login"  component={Submit} />
               <Route path ="/lal" component={Otp} />
              
