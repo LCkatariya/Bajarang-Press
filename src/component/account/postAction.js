@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch';
-import Verification from './verification';
+//import Verification from './verification';
 
 
 
